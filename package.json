@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "inquirer": "^14.0.2",
+    "prettier": "^3.2.5",
+    "turbo": "^2.9.16"
+  },
+  "packageManager": "pnpm@11.5.0",
+  "name": "with-vite-react"
+}
