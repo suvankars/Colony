@@ -69,7 +69,7 @@ const [, navigate] = useLocation();
         key={b.id}
         booking={b}
         className={styles.cardItem}
-        onClick={() => console.log("open", b.id)}
+        onClick={() => navigate(routes.VIEW_BOOKING.path.replace(":id", b.id))}
       />
     ));
   };

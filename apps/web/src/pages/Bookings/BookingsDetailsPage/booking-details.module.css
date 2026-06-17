@@ -1,0 +1,148 @@
+.page {
+  padding: 24px 48px 40px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.back {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.panel {
+  width: 100%;
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.heroMap {
+  width: 100%;
+  height: 650px;
+  display: block;
+}
+
+.mapPlaceholder {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #eef2ff, #fff);
+  border-radius: 0; /* flush with panel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailsBox {
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  padding: 20px; /* side padding 20px */
+  box-sizing: border-box;
+}
+
+.details {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.name {
+  margin: 0;
+}
+.badge {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.field {
+  margin-top: 12px;
+}
+.label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.value {
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.metaRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.metaItem {
+  background: rgba(15, 23, 42, 0.03);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.metaLabel {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.metaValue {
+  font-weight: 600;
+}
+
+.mapLabel {
+  font-weight: 600;
+  color: #0f172a;
+}
+.mapNote {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.loading,
+.empty,
+.error {
+  padding: 20px;
+  background: var(--card);
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .map {
+    order: 2;
+  }
+  .page {
+    padding: 16px;
+  }
+  .heroMap {
+    height: 420px;
+  }
+  .detailsBox {
+    margin: 14px 0;
+    padding: 16px;
+  }
+}
