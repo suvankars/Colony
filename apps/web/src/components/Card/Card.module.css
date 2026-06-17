@@ -1,0 +1,105 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.skeleton {
+  min-width: 220px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.placeholderTitle {
+  height: 18px;
+  width: 60%;
+  background: linear-gradient(90deg, #e6e9ef 25%, #f3f5f9 37%, #e6e9ef 63%);
+  border-radius: 6px;
+}
+
+.placeholderLine {
+  height: 12px;
+  width: 80%;
+  background: linear-gradient(90deg, #e6e9ef 25%, #f3f5f9 37%, #e6e9ef 63%);
+  border-radius: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.route {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0 }
+  100% { background-position: 200px 0 }
+}
+
+.placeholderTitle, .placeholderLine {
+  background: linear-gradient(90deg, #e6e9ef 25%, #f3f5f9 37%, #e6e9ef 63%);
+  background-size: 400px 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+/* Layout sizing when Card is used as an item in a cards row */
+/* card sizing removed — moved back to layout (Dashboard) */

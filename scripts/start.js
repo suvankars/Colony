@@ -12,6 +12,7 @@ async function main() {
       choices: [
         { name: "web", value: "web" },
         { name: "dashboard", value: "dashboard" },
+         { name: "api", value: "api" },
       ],
     },
   ]);

@@ -13,7 +13,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-export const SideBar = () => {
+export const SideBar = ({ onNavigate }: { onNavigate?: (label: string) => void } = {}) => {
   const [expanded, setExpanded] = useState(true);
 
   const links = [
@@ -58,7 +58,11 @@ export const SideBar = () => {
       </div>
       <nav className={styles.sidebarNav}>
         {links.map((link) => (
-          <button className={styles.sidebarLink} key={link.label}>
+          <button
+            className={styles.sidebarLink}
+            key={link.label}
+            onClick={() => onNavigate?.(link.label)}
+          >
             {link.icon}
             {expanded ? <span>{link.label}</span> : ""}
           </button>
@@ -67,7 +71,11 @@ export const SideBar = () => {
 
       <nav className={styles.sidebarNav}>
         {profileLink.map((link) => (
-          <button className={styles.sidebarLink} key={link.label}>
+          <button
+            className={styles.sidebarLink}
+            key={link.label}
+            onClick={() => onNavigate?.(link.label)}
+          >
             {link.icon}
             {expanded ? <span>{link.label}</span> : ""}
           </button>

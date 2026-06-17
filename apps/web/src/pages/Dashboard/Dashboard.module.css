@@ -1,0 +1,66 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topRides {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sectionMeta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.viewAll {
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cardsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.empty {
+  color: #6b7280;
+}
+
+.error {
+  color: #b91c1c;
+  margin-bottom: 8px;
+}
+
+/* card sizing moved to the Card component's CSS (card.module.css) */
+.cardItem {
+  flex: 0 0 260px;
+  max-width: 320px;
+}
+
+@media (max-width: 800px) {
+  .cardItem {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardItem {
+    flex: 1 1 100%;
+  }
+}
